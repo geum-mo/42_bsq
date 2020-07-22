@@ -6,7 +6,7 @@
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 16:00:17 by gekang            #+#    #+#             */
-/*   Updated: 2020/07/22 17:04:35 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 22:18:25 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	handle_single_arg(void)
 		write(1, "map error\n", 10);
 		return ;
 	}
-	make_ans();
+	process();
 	free_str(g_map);
 }
 

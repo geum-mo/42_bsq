@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_utils.c                                        :+:      :+:    :+:   */
+/*   util_funcs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 16:45:42 by llim              #+#    #+#             */
-/*   Updated: 2020/07/22 19:03:34 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 22:03:24 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ void	print_arr(char **arr)
 	int i;
 
 	i = 0;
-	while (i < g_info.i_size)
+	while (i < g_meta.x_size)
 	{
-		write(1, arr[i], g_info.j_size);
+		write(1, arr[i], g_meta.y_size);
 		write(1, "\n", 1);
 		i++;
 	}
@@ -76,13 +76,13 @@ int		min(int a, int b)
 
 void	init_struct(void)
 {
-	g_info.i_size = 0;
-	g_info.j_size = 0;
-	g_info.empty = 0;
-	g_info.obstacle = 0;
-	g_info.full = 0;
-	g_info.i_index = 0;
-	g_info.j_index = 0;
-	g_info.max = 1;
+	g_meta.x_size = 0;
+	g_meta.y_size = 0;
+	g_meta.empty = 0;
+	g_meta.obstacle = 0;
+	g_meta.full = 0;
+	g_meta.x_index = 0;
+	g_meta.y_index = 0;
+	g_meta.max = 1;
 }
 

@@ -6,7 +6,7 @@
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 17:02:45 by gekang            #+#    #+#             */
-/*   Updated: 2020/07/22 17:06:47 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 21:57:24 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	solve(char *argv[], int i)
 		i++;
 		return ;
 	}
-	make_ans();
+	process();
 	free_str(g_map);
 	i++;
 }

@@ -6,13 +6,12 @@
 #    By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/22 15:57:05 by gekang            #+#    #+#              #
-#    Updated: 2020/07/22 15:59:16 by gekang           ###   ########.fr        #
+#    Updated: 2020/07/22 22:05:27 by gekang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = bsq
-SRCS = ${wildcard srcs/*.c} # change later
-
+SRCS = srcs/check_input_map.c srcs/main.c srcs/mem_mgt.c srcs/parsing_map.c srcs/process.c srcs/solve.c srcs/stdin.c srcs/util_funcs.c
 OBJS = ${SRCS:.c=.o}
 
 CC = gcc

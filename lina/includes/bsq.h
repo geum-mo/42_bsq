@@ -6,7 +6,7 @@
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 15:59:30 by gekang            #+#    #+#             */
-/*   Updated: 2020/07/22 17:05:28 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 22:03:25 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,24 @@
 
 typedef	struct	s_map
 {
-	int			i_size;
-	int			j_size;
-
+	int			x_size;
+	int			y_size;
 	char		empty;
 	char		obstacle;
 	char		full;
-
-	int			i_index;
-	int			j_index;
+	int			x_index;
+	int			y_index;
 	int			max;
 }				t_map;
 
 char			**g_map;
-t_map			g_info;
+t_map			g_meta;
 int				**g_arr;
 
 void			free_arr(void);
 void			free_str(char **str);
 void			solve(char *argv[], int i);
-void			arg_one(void);
+void			handle_single_arg(void);
 
 void			init_struct(void);
 void			print_arr(char **arr);
@@ -52,14 +50,14 @@ int				get_row_count(char *strmap);
 char			*ft_strndup(char *str, int size);
 char			**split_map(char *strmap, int size);
 
-char			*ft_strndupcat(char *dest, char *src, int size);
+char			*ft_strndup_and_concat(char *dest, char *src, int size);
 char			*get_stdin(void);
 
 void			fill_map(char **map);
-void			find_index(void);
+void			get_xy_index(void);
 void			malloc_g_arr(void);
 void			make_g_arr(char **map);
-void			make_ans(void);
+void			process(void);
 
 int				check_input_map(void);
 int				line_is_valid(int i, int j, int len);

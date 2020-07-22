@@ -6,7 +6,7 @@
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 17:01:28 by gekang            #+#    #+#             */
-/*   Updated: 2020/07/22 17:15:04 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 21:59:23 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		map_size(char *file_name)
 {
 	int		size;
 	int		fd;
-	char	buff[4096];
+	char	buff[1024];
 
 	if ((fd = open(file_name, O_RDONLY)) == -1)
 		return (0);
@@ -42,16 +42,16 @@ char	*input_map(char *file_name, int size)
 	return (s);
 }
 
-int		get_row_count(char *strmap)
+int		get_row_count(char *map_in_str)
 {
 	int		count;
 	int		i;
 
 	i = 0;
 	count = 0;
-	while (strmap[i])
+	while (map_in_str[i])
 	{
-		if (strmap[i] == '\n')
+		if (map_in_str[i] == '\n')
 			count++;
 		i++;
 	}

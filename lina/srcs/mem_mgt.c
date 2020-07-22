@@ -6,7 +6,7 @@
 /*   By: gekang <gekang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 17:03:43 by gekang            #+#    #+#             */
-/*   Updated: 2020/07/22 17:03:49 by gekang           ###   ########.fr       */
+/*   Updated: 2020/07/22 21:59:01 by gekang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	free_arr(void)
 	int	i;
 
 	i = 0;
-	while (i < g_info.i_size)
+	while (i < g_meta.x_size)
 	{
 		free(g_arr[i]);
 		i++;
